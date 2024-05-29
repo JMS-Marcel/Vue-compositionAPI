@@ -22,10 +22,6 @@
     {id: 2235, color: 'blue',image:'../public/images/socks_blue.jpg', quantity:0},
   ];
 
-  
-  function addToCart(){
-    cart.value ++;
-  }
 
   function updateVariant(index){
     selectedVariant.value = index;
@@ -78,7 +74,7 @@
             class="button"
             :class="{disabledButton: !inStock}"
             :disabled="!inStock"
-            @click="addToCart">
+            @click="$emit('add-to-cart', variants[selectedVariant].id)">
             Add to Cart
           </button>
 
