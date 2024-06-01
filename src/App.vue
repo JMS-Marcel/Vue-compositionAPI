@@ -1,6 +1,6 @@
 <script setup>
 //Forms
-import { ref } from 'vue';
+import { ref } from 'vue'
 import ProductDisplay from './components/ProductDisplay.vue';
 import ReviewForm from './components/ReviewForm.vue'
 import ReviewList from './components/ReviewList.vue'
@@ -9,12 +9,14 @@ import ReviewList from './components/ReviewList.vue'
   let cart = ref([]);
   let reviews = ref([]);
   let premium = true;
+
   function updateCart(id) {
     cart.value.push(id);
   }
   function addReview(review){
-    reviews.value.push(review)
+    reviews.value.push(review);
   }
+ 
 </script>
 
 <template>

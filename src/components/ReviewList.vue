@@ -1,22 +1,24 @@
-<script setup lang="ts">
+<script setup>
   
-  const props = defineProps<{
+  const props = defineProps({
     reviews: {
       type: Array,
       required: true
     }
-  }>();
+  });
   console.log(props.reviews);
   
 </script>
 <template>
-  <div class="review-container">
+  <div v-if="reviews.length" class="review-container">
     <h3>Reviews:</h3>
     <ul>
+      
       <li v-for="review, index in reviews" :key="index">
-        {{ review.name }} gave this {{ review.rating }} stars
+        <strong>{{ review.name }}</strong> a donné <strong>{{ review.rating }} étoile(s).</strong>✨
         <br>
-        "{{ review.review }}"
+        <br>
+        <strong>"{{ review.review }}"</strong>⌛
       </li>
     </ul>
   </div>

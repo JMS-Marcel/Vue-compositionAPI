@@ -8,11 +8,11 @@
     }
   }>();
 
-  console.log(props.premium);
   
+ 
   const product = ref('Socks');
   const brand = ref('Vue Mastery');
-
+  let reviews = [];
   
   let selectedVariant = ref(0);
 
@@ -26,7 +26,7 @@
   function updateVariant(index){
     selectedVariant.value = index;
   }
-
+ 
   const title = computed(()=>{
     return brand.value + ' ' + product.value;
   });
