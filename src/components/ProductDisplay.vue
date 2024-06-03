@@ -18,8 +18,8 @@
 
   const details = ['50% cotton', '30% wool', '20% polyester'];
   const variants = [
-    {id: 2234, color: 'green',image:'../public/images/socks_green.jpg', quantity:50},
-    {id: 2235, color: 'blue',image:'../public/images/socks_blue.jpg', quantity:0},
+    {id: 2234, color: 'green',image:'images/socks_green.jpg', quantity:50},
+    {id: 2235, color: 'blue',image:'images/socks_blue.jpg', quantity:0},
   ];
 
 
